@@ -24,12 +24,14 @@ import icon from '../assets/icon.svg'
         label="Blog"
         variant="link"
         color="neutral"
+        active-color="primary"
         class="text-base font-normal"
       />
       <UButton
         label="Projects"
         variant="link"
         color="neutral"
+        active-color="primary"
         class="text-base font-normal"
       />
       <USeparator orientation="vertical" class="mx-2 h-4" />

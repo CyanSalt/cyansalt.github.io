@@ -61,12 +61,12 @@ const groups = computed(() => {
               variant="link"
               :label="post.title"
               :ui="{
-                base: 'flex-wrap gap-2 p-0 text-lg',
+                base: 'flex-wrap gap-2 p-0 text-lg font-normal',
                 label: 'whitespace-normal',
               }"
             >
               <template #trailing>
-                <span class="font-normal text-dimmed">{{ formatDate(new Date(post.createdAt)) }}</span>
+                <span class="text-dimmed">{{ formatDate(new Date(post.createdAt)) }}</span>
               </template>
             </UButton>
           </div>

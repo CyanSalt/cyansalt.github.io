@@ -35,7 +35,7 @@ useHead(() => ({
         <UContentSurround :surround="surround" />
       </UPageBody>
       <template v-if="post?.body.toc?.links.length" #right>
-        <UContentToc :links="post.body.toc.links" :ui="{ linkText: 'font-medium' }" />
+        <UContentToc :links="post.body.toc.links" />
       </template>
     </UPage>
   </UContainer>
