@@ -13,3 +13,18 @@
   --color-brand-800: #003D73;
   --color-brand-900: #00294D;
 }
+
+.shiki .highlighted,
+.shiki .diff {
+  margin-inline: -1rem;
+  padding-inline: 1rem;
+}
+.shiki .highlighted.error {
+  background-color: color-mix(in oklab, var(--ui-error) 10%, transparent);
+}
+.shiki .diff.add {
+  background-color: color-mix(in oklab, var(--ui-success) 10%, transparent);
+}
+.shiki .diff.remove {
+  background-color: color-mix(in oklab, var(--ui-error) 10%, transparent);
+}

@@ -1,12 +1,12 @@
 <script setup>
-import avatar from './assets/avatar.png'
 import iconInvert from './assets/icon-invert.svg'
 import icon from './assets/icon.svg'
 import AppFooter from './components/AppFooter.vue'
 import AppHeader from './components/AppHeader.vue'
-import { useHead, useSeoMeta } from '#app'
+import { useHead, useSeoMeta } from '#imports'
 
 useHead({
+  titleTemplate: title => `${title ? `${title} - ` : ''}@CyanSalt`,
   htmlAttrs: {
     lang: 'en',
   },
@@ -16,18 +16,12 @@ useHead({
   ],
 })
 
-const title = '@CyanSalt'
-const description = 'A non-independent developer who is passionate about open-source projects'
-
 if (import.meta.server) {
   useSeoMeta({
-    title,
-    description,
     author: 'Sun Xiaoran',
-    ogTitle: title,
+    ogTitle: '%s',
+    ogSiteName: '@CyanSalt',
     ogType: 'website',
-    ogDescription: description,
-    ogImage: avatar,
   })
 }
 </script>

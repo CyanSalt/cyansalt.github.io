@@ -30,13 +30,17 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.142",
     "@iconify-json/simple-icons": "^1.2.99",
+    "@nuxt/content": "^3.16.2",
     "@nuxt/ui": "^4.11.3",
     "nuxt": "^4.6.1",
+    "remark-breaks": "^4.0.0",
+    "remark-custom-header-id": "^1.0.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@cyansalt/eslint-config": "^4.6.0",
     "@cyansalt/tsconfig": "^3.0.2",
+    "@types/node": "^24.19.2",
     "eslint": "^10.12.0",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.13"

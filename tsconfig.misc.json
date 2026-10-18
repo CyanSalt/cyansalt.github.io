@@ -1,9 +1,7 @@
 {
   "extends": "@cyansalt/tsconfig",
-  "compilerOptions": {
-    "composite": true
-  },
   "include": [
+    "content.config.ts",
     "eslint.config.js"
   ]
 }

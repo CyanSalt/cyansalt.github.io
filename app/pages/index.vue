@@ -1,7 +1,17 @@
+<script lang="ts" setup>
+import { useSeoMeta } from '#app'
+
+const description = 'A non-independent developer who is passionate about open-source projects'
+
+useSeoMeta({
+  description,
+})
+</script>
+
 <template>
   <UPageHero
     title="Sun Xiaoran"
-    description="A non-independent developer who is passionate about open-source projects"
+    :description="description"
     :ui="{
       description: 'text-xl sm:text-2xl/8',
     }"
