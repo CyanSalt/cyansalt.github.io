@@ -19,12 +19,22 @@ useHead(() => ({
 
 <template>
   <UContainer>
-    <UPage v-if="post">
+    <UPage>
       <UPageBody>
-        <ContentRenderer :value="post" />
+        <ContentRenderer v-if="post" :value="post" />
+        <UEmpty
+          v-else
+          icon="i-lucide:ghost"
+          title="This post could not be found."
+          description="Perhaps you found it before I did."
+          variant="naked"
+          :actions="[
+            { to: '/posts', label: 'Read other posts' },
+          ]"
+        />
         <UContentSurround :surround="surround" />
       </UPageBody>
-      <template v-if="post.body.toc?.links.length" #right>
+      <template v-if="post?.body.toc?.links.length" #right>
         <UContentToc :links="post.body.toc.links" :ui="{ linkText: 'font-medium' }" />
       </template>
     </UPage>

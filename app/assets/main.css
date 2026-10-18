@@ -2,16 +2,16 @@
 @import '@nuxt/ui';
 
 @theme static {
-  --color-brand-50: #F2F9FF;
-  --color-brand-100: #E6F3FF;
-  --color-brand-200: #BFE1FF;
-  --color-brand-300: #99CFFF;
-  --color-brand-400: #4DACFF;
-  --color-brand-500: #0088FF;
-  --color-brand-600: #007AE6;
-  --color-brand-700: #005299;
-  --color-brand-800: #003D73;
-  --color-brand-900: #00294D;
+  --color-cyan-50: #F3FBFD;
+  --color-cyan-100: #E8F8FC;
+  --color-cyan-200: #C5EDF6;
+  --color-cyan-300: #A3E1F1;
+  --color-cyan-400: #5DCBE7;
+  --color-cyan-500: #18B5DC;
+  --color-cyan-600: #16A3C6;
+  --color-cyan-700: #0E6D84;
+  --color-cyan-800: #0B5163;
+  --color-cyan-900: #073642;
 }
 
 .shiki .highlighted,
