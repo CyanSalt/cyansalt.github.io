@@ -103,7 +103,7 @@ console.assert(
 )
 ```
 
-在 Node.js 中，实际上有一个内置的模块 [assert](https%3A%2F%2Fnodejs.org%2Fapi%2Fassert.html)，包含了一个断言的常见功能：deepEqual。例如
+在 Node.js 中，实际上有一个内置的模块 [assert](https://nodejs.org/api/assert.html)，包含了一个断言的常见功能：deepEqual。例如
 
 ```js
 const assert = require('assert')
@@ -112,9 +112,9 @@ const value = foo()
 assert.deepEqual(value, { a: 1, b: 2, c: 3 })
 ```
 
-此外，NPM 生态中也有很多例如 [power-assert](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fpower-assert) 这样的库，在 assert 的基础上提供了更多实用的功能。
+此外，NPM 生态中也有很多例如 [power-assert](https://www.npmjs.com/package/power-assert) 这样的库，在 assert 的基础上提供了更多实用的功能。
 
-assert 风格通常被认为是 TDD 风格的，而在 BDD 中，由于 assert 并不能准确地表达“行为”这个概念，所以也有一些断言库为 Node 另一种风格的 API，最经典的就是 [chai](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fchai)。
+assert 风格通常被认为是 TDD 风格的，而在 BDD 中，由于 assert 并不能准确地表达“行为”这个概念，所以也有一些断言库为 Node 另一种风格的 API，最经典的就是 [chai](https://www.npmjs.com/package/chai)。
 
 Chai 同时支持 TDD/BDD 风格的 API。所谓 TDD 风格也就是 assert 函数，而 BDD 风格则书写为：
 
@@ -137,7 +137,7 @@ expect(value).to.equal({ a: 1, b: 2, c: 3 })
 
 自动化的单元测试几乎一定需要 Mock 功能。试想你需要测试的功能依赖定时器函数，总不至于我需要等待多少时间执行定时器，测试代码就运行多少时间吧？再例如，我需要使用 Node.js 的 http 模块，但是我不希望在测试中直接发送请求。上面的情况都是需要对对应的模块进行 mock 的。
 
-目前比较主流的 mock 库基本就是 [Sinon](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fsinon) 了。首先，它提供了可以监听函数调用的功能：
+目前比较主流的 mock 库基本就是 [Sinon](https://www.npmjs.com/package/sinon) 了。首先，它提供了可以监听函数调用的功能：
 
 ```js
 const spay = sinon.spy($, 'ajax')
@@ -145,17 +145,17 @@ $.ajax(/* ... */)
 expect(spay.callCount).to.be(1)
 ```
 
-另外它也可以实现对于某个函数/访问器实现的模拟。详细的接口可以看他们的[官网](https%3A%2F%2Fsinonjs.org%2F)。
+另外它也可以实现对于某个函数/访问器实现的模拟。详细的接口可以看他们的[官网](https://sinonjs.org/)。
 
 ### 测试覆盖率 {#coverage}
 
-顾名思义，测试覆盖率指的是运行单元测试可以检查到的代码的占比。目前主流的覆盖率分析工具是 [istanbul](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fistanbul) 及其继任者 [nyc](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fnyc)。
+顾名思义，测试覆盖率指的是运行单元测试可以检查到的代码的占比。目前主流的覆盖率分析工具是 [istanbul](https://www.npmjs.com/package/istanbul) 及其继任者 [nyc](https://www.npmjs.com/package/nyc)。
 
 一般来说，覆盖率测试是通过 babel 这样的工具或是某些解释器提供的功能，来检查测试代码运行后执行过的代码行数、函数数量和分支数等等，最终给出一个近似的比例。
 
 ### 框架 {#framework}
 
-目前主流的测试框架有：[Jest](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fjest)、[Mocha](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fmocha)、[Ava](https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fava) 等
+目前主流的测试框架有：[Jest](https://www.npmjs.com/package/jest)、[Mocha](https://www.npmjs.com/package/mocha)、[Ava](https://www.npmjs.com/package/ava) 等
 
 Mocha 是一个相当老牌的测试框架，来自于非著名设计师 TJ Holowaychuk。上述功能它基本上都不支持，也正因如此，上述的主流工具库大多是为了填补 Mocha 的空白出现的。所以尽管 Mocha 支持的功能有限，但是 Mocha + Chai + Sinon + Nyc 就是一套测试利器了。
 
