@@ -1,0 +1,154 @@
+main {
+  --ui-text: oklch(37.2% .044 257.287);
+  --ui-text-muted: oklch(55.4% 0.046 257.417);
+  --ui-text-dimmed: oklch(70.4% 0.04 256.788);
+  --ui-text-inverted: white;
+  --ui-bg: white;
+  --ui-bg-muted: oklch(0.984 0.003 247.858);
+  --ui-bg-elevated: oklch(96.8% 0.007 247.896);
+  --ui-border: oklch(92.9% 0.013 255.508);
+  --ui-border-muted: oklch(92.9% 0.013 255.508);
+  --ui-border-accented: oklch(86.9% 0.022 252.894);
+  --ui-color-neutral-200: oklch(92.9% 0.013 255.508);
+  --ui-primary: oklch(0.715 0.143 215.221);
+  --ui-info: oklch(0.623 0.214 259.815);
+  --ui-success: rgb(0, 193, 106);
+  --ui-warning: oklch(0.795 0.184 86.047);
+  --ui-error: oklch(0.637 0.237 25.331);
+
+  --ui-radius: 0.25rem;
+  --spacing: .25rem;
+
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-btn-text: var(--ui-text);
+  --color-btn-bg: var(--ui-bg);
+  --color-btn-border: var(--ui-border-accented);
+  --color-btn-shadow: none;
+  --color-btn-inset-shadow: none;
+  --color-btn-hover-bg: var(--ui-bg-elevated);
+  --color-btn-hover-border: var(--ui-border-accented);
+  --color-btn-active-bg: var(--ui-bg-elevated);
+  --color-btn-active-border: var(--ui-border-accented);
+  --color-btn-selected-bg: var(--ui-bg-elevated);
+  --color-btn-primary-text: var(--ui-text-inverted);
+  --color-btn-primary-bg: var(--ui-primary);
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-shadow: none;
+  --color-btn-primary-inset-shadow: none;
+  --color-btn-primary-hover-bg: color-mix(in oklab, var(--ui-primary) 75%, transparent);
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-selected-bg: var(--ui-primary);
+  --color-btn-primary-selected-shadow: none;
+  --color-btn-primary-disabled-text: var(--ui-text-inverted);
+  --color-btn-primary-disabled-bg: color-mix(in oklab, var(--ui-primary) 75%, transparent);
+  --color-btn-primary-disabled-border: transparent;
+  --color-action-list-item-default-hover-bg: color-mix(in oklab, var(--ui-bg-elevated) 50%, transparent);
+  --color-segmented-control-bg: var(--ui-bg-elevated);
+  --color-segmented-control-button-bg: var(--ui-bg);
+  --color-segmented-control-button-selected-border: var(--ui-border-muted);
+  --color-fg-default: var(--ui-text);
+  --color-fg-muted: var(--ui-text-muted);
+  --color-fg-subtle: var(--ui-text-dimmed);
+  --color-canvas-default: var(--ui-bg);
+  --color-canvas-overlay: var(--ui-bg);
+  --color-canvas-inset: var(--ui-bg-muted);
+  --color-canvas-subtle: var(--ui-bg-muted);
+  --color-border-default: var(--ui-border);
+  --color-border-muted: var(--ui-border-muted);
+  --color-neutral-muted: var(--ui-color-neutral-200);
+  --color-accent-fg: var(--ui-info);
+  --color-accent-emphasis: var(--ui-info);
+  --color-accent-muted: color-mix(in oklab, var(--ui-info) 25%, transparent);
+  --color-accent-subtle: color-mix(in oklab, var(--ui-info) 10%, transparent);
+  --color-success-fg: var(--ui-success);
+  --color-attention-fg: var(--ui-warning);
+  --color-attention-muted: color-mix(in oklab, var(--ui-warning) 25%, transparent);
+  --color-attention-subtle: color-mix(in oklab, var(--ui-warning) 10%, transparent);
+  --color-danger-fg: var(--ui-error);
+  --color-danger-muted: color-mix(in oklab, var(--ui-error) 25%, transparent);
+  --color-danger-subtle: color-mix(in oklab, var(--ui-error) 10%, transparent);
+  --color-primer-shadow-inset: none;
+  --color-scale-gray-1: var(--ui-bg-elevated);
+  --color-scale-blue-1: color-mix(in oklab, var(--ui-info) 10%, transparent);
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+.gsc-comment-box:not(.gsc-comment-box-is-reply) {
+  border-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-write {
+  border-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-main {
+  margin-block: calc(var(--spacing) * 2);
+  margin-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-comment-box-tabs {
+  border-start-end-radius: calc(var(--ui-radius) * 2);
+  border-start-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-textarea {
+  border-radius: calc(var(--ui-radius) * 2);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-block: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-comment-box-textarea-extras {
+  border-end-end-radius: calc(var(--ui-radius) * 2);
+  border-end-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-bottom {
+  margin-block: calc(var(--spacing) * 2);
+  margin-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-reply-box {
+  border-end-end-radius: calc(var(--ui-radius) * 2);
+  border-end-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment > div {
+  border-radius: calc(var(--ui-radius) * 2) !important;
+}
+.gsc-reply-box > button {
+  border-radius: calc(var(--ui-radius) * 1.5) !important;
+  padding-block: calc(var(--spacing) * 1.5) !important;
+  padding-inline: calc(var(--spacing) * 2.5) !important;
+}
+.gsc-comment-box-buttons > button {
+  margin-inline-start: calc(var(--spacing) * 2) !important;
+  border-radius: calc(var(--ui-radius) * 1.5) !important;
+  padding-block: calc(var(--spacing) * 1.5) !important;
+  padding-inline: calc(var(--spacing) * 2.5) !important;
+}

@@ -1,0 +1,154 @@
+main {
+  --ui-text: oklch(92.9% 0.013 255.508);
+  --ui-text-muted: oklch(70.4% 0.04 256.788);
+  --ui-text-dimmed: oklch(55.4% 0.046 257.417);
+  --ui-text-inverted: oklch(20.8% 0.042 265.755);
+  --ui-bg: oklch(20.8% 0.042 265.755);
+  --ui-bg-muted: oklch(27.9% 0.041 260.031);
+  --ui-bg-elevated: oklch(27.9% 0.041 260.031);
+  --ui-border: oklch(27.9% 0.041 260.031);
+  --ui-border-muted: oklch(37.2% 0.044 257.287);
+  --ui-border-accented: oklch(37.2% 0.044 257.287);
+  --ui-color-neutral-700: oklch(37.2% 0.044 257.287);
+  --ui-primary: oklch(78.9% 0.154 211.53);
+  --ui-info: oklch(70.7% 0.165 254.624);
+  --ui-success: oklch(79.2% 0.209 151.711);
+  --ui-warning: oklch(85.2% 0.199 91.936);
+  --ui-error: oklch(70.4% 0.191 22.216);
+
+  --ui-radius: 0.25rem;
+  --spacing: .25rem;
+
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-btn-text: var(--ui-text);
+  --color-btn-bg: var(--ui-bg);
+  --color-btn-border: var(--ui-border-accented);
+  --color-btn-shadow: none;
+  --color-btn-inset-shadow: none;
+  --color-btn-hover-bg: var(--ui-bg-elevated);
+  --color-btn-hover-border: var(--ui-border-accented);
+  --color-btn-active-bg: var(--ui-bg-elevated);
+  --color-btn-active-border: var(--ui-border-accented);
+  --color-btn-selected-bg: var(--ui-bg-elevated);
+  --color-btn-primary-text: var(--ui-text-inverted);
+  --color-btn-primary-bg: var(--ui-primary);
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-shadow: none;
+  --color-btn-primary-inset-shadow: none;
+  --color-btn-primary-hover-bg: color-mix(in oklab, var(--ui-primary) 75%, transparent);
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-selected-bg: var(--ui-primary);
+  --color-btn-primary-selected-shadow: none;
+  --color-btn-primary-disabled-text: var(--ui-text-inverted);
+  --color-btn-primary-disabled-bg: color-mix(in oklab, var(--ui-primary) 75%, transparent);
+  --color-btn-primary-disabled-border: transparent;
+  --color-action-list-item-default-hover-bg: color-mix(in oklab, var(--ui-bg-elevated) 50%, transparent);
+  --color-segmented-control-bg: var(--ui-bg-elevated);
+  --color-segmented-control-button-bg: var(--ui-bg);
+  --color-segmented-control-button-selected-border: var(--ui-border-muted);
+  --color-fg-default: var(--ui-text);
+  --color-fg-muted: var(--ui-text-muted);
+  --color-fg-subtle: var(--ui-text-dimmed);
+  --color-canvas-default: var(--ui-bg);
+  --color-canvas-overlay: var(--ui-bg);
+  --color-canvas-inset: var(--ui-bg-muted);
+  --color-canvas-subtle: var(--ui-bg-muted);
+  --color-border-default: var(--ui-border);
+  --color-border-muted: var(--ui-border-muted);
+  --color-neutral-muted: var(--ui-color-neutral-700);
+  --color-accent-fg: var(--ui-info);
+  --color-accent-emphasis: var(--ui-info);
+  --color-accent-muted: color-mix(in oklab, var(--ui-info) 25%, transparent);
+  --color-accent-subtle: color-mix(in oklab, var(--ui-info) 10%, transparent);
+  --color-success-fg: var(--ui-success);
+  --color-attention-fg: var(--ui-warning);
+  --color-attention-muted: color-mix(in oklab, var(--ui-warning) 25%, transparent);
+  --color-attention-subtle: color-mix(in oklab, var(--ui-warning) 10%, transparent);
+  --color-danger-fg: var(--ui-error);
+  --color-danger-muted: color-mix(in oklab, var(--ui-error) 25%, transparent);
+  --color-danger-subtle: color-mix(in oklab, var(--ui-error) 10%, transparent);
+  --color-primer-shadow-inset: none;
+  --color-scale-gray-1: var(--ui-bg-elevated);
+  --color-scale-blue-1: color-mix(in oklab, var(--ui-info) 10%, transparent);
+
+  /*! Extensions from @primer/css/alerts/flash.scss */
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+.gsc-comment-box:not(.gsc-comment-box-is-reply) {
+  border-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-write {
+  border-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-main {
+  margin-block: calc(var(--spacing) * 2);
+  margin-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-comment-box-tabs {
+  border-start-end-radius: calc(var(--ui-radius) * 2);
+  border-start-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-textarea {
+  border-radius: calc(var(--ui-radius) * 2);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-block: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-comment-box-textarea-extras {
+  border-end-end-radius: calc(var(--ui-radius) * 2);
+  border-end-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment-box-bottom {
+  margin-block: calc(var(--spacing) * 2);
+  margin-inline: calc(var(--spacing) * 2.5);
+}
+.gsc-reply-box {
+  border-end-end-radius: calc(var(--ui-radius) * 2);
+  border-end-start-radius: calc(var(--ui-radius) * 2);
+}
+.gsc-comment > div {
+  border-radius: calc(var(--ui-radius) * 2) !important;
+}
+.gsc-reply-box > button {
+  border-radius: calc(var(--ui-radius) * 1.5) !important;
+  padding-block: calc(var(--spacing) * 1.5) !important;
+  padding-inline: calc(var(--spacing) * 2.5) !important;
+}
+.gsc-comment-box-buttons > button {
+  margin-inline-start: calc(var(--spacing) * 2) !important;
+  border-radius: calc(var(--ui-radius) * 1.5) !important;
+  padding-block: calc(var(--spacing) * 1.5) !important;
+  padding-inline: calc(var(--spacing) * 2.5) !important;
+}
