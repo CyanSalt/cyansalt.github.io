@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { queryCollection, queryCollectionItemSurroundings, useAsyncData, useHead, useRoute } from '#imports'
+import { createError, queryCollection, queryCollectionItemSurroundings, useAsyncData, useHead, useRoute } from '#imports'
 
 const route = useRoute()
 
@@ -11,6 +11,13 @@ const { data: surround } = await useAsyncData(() => `surround:${route.path}`, ()
   return queryCollectionItemSurroundings('posts', route.path).order('createdAt', 'ASC')
 })
 
+if (!post.value) {
+  throw createError({
+    status: 404,
+    statusText: `Page not found: ${route.path}`,
+  })
+}
+
 useHead(() => ({
   title: post.value?.title,
   description: post.value?.description,
@@ -18,23 +25,13 @@ useHead(() => ({
 </script>
 
 <template>
-  <UContainer>
+  <UContainer v-if="post">
     <UPage>
       <UPageBody>
-        <ContentRenderer v-if="post" :value="post" />
-        <UEmpty
-          v-else
-          icon="i-lucide:ghost"
-          title="This post could not be found."
-          description="Perhaps you found it before I did."
-          variant="naked"
-          :actions="[
-            { to: '/posts', label: 'Read other posts' },
-          ]"
-        />
+        <ContentRenderer :value="post" />
         <UContentSurround :surround="surround" />
       </UPageBody>
-      <template v-if="post?.body.toc?.links.length" #right>
+      <template v-if="post.body.toc?.links.length" #right>
         <UContentToc :links="post.body.toc.links" />
       </template>
     </UPage>

@@ -1,8 +1,6 @@
 <script setup>
 import iconInvert from './assets/icon-invert.svg'
 import icon from './assets/icon.svg'
-import AppFooter from './components/AppFooter.vue'
-import AppHeader from './components/AppHeader.vue'
 import { useHead, useSeoMeta } from '#imports'
 
 useHead({
@@ -27,11 +25,7 @@ if (import.meta.server) {
 </script>
 
 <template>
-  <UApp>
-    <AppHeader />
-    <UMain>
-      <NuxtPage />
-    </UMain>
-    <AppFooter />
-  </UApp>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

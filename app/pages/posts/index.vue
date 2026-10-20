@@ -23,14 +23,6 @@ function formatYear(date: Date) {
   }).format(date)
 }
 
-function formatDate(date: Date) {
-  return new Intl.DateTimeFormat(undefined, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  }).format(date)
-}
-
 const groups = computed(() => {
   return Array.from(
     Map.groupBy(posts.value, post => formatYear(new Date(post.createdAt))),
@@ -66,7 +58,13 @@ const groups = computed(() => {
               }"
             >
               <template #trailing>
-                <span class="text-dimmed">{{ formatDate(new Date(post.createdAt)) }}</span>
+                <NuxtTime
+                  :datetime="post.createdAt"
+                  year="numeric"
+                  month="short"
+                  day="numeric"
+                  class="text-dimmed"
+                />
               </template>
             </UButton>
           </div>
