@@ -6,7 +6,7 @@ createdAt: 2024-04-07T03:46:28.000Z
 
 先来看下这个效果（把 demo 写出来之后才发现效果还挺炸裂的）：
 
-<video src="https://github.com/CyanSalt/notebook/assets/5101076/d8f8ec89-b82c-4770-b001-5f4b1bb03bb6" controls></video>
+<video src="https://user-images.githubusercontent.com/5101076/d8f8ec89-b82c-4770-b001-5f4b1bb03bb6" controls></video>
 
 这相当于将 CSS 变量与 JS 彻底打通了。传统意义上我们似乎只能通过 JS 控制 CSS，但是看起来实际上也是可以反过来的。
 
