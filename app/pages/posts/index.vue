@@ -43,7 +43,7 @@ const groups = computed(() => {
 </script>
 
 <template>
-  <UPageCTA
+  <UPageSection
     :title="title"
     :description="description"
     variant="naked"

@@ -28,6 +28,7 @@ import icon from '../assets/icon.svg'
         class="text-base font-normal"
       />
       <UButton
+        to="/projects"
         label="Projects"
         variant="link"
         color="neutral"
