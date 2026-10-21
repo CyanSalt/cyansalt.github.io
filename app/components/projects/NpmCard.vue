@@ -16,7 +16,8 @@ const defaultGitHubURL = computed(() => `https://github.com/CyanSalt/${name}`)
 
 const npmURL = computed(() => `https://www.npmjs.com/package/${name}`)
 
-const badgeURL = computed(() => `https://img.shields.io/npm/v/${name}?style=for-the-badge&logo=npm&label=&color=00B8DB`)
+const lightBadgeURL = computed(() => `https://img.shields.io/npm/v/${name}?style=for-the-badge&logo=npm&label=&color=00B8DB`)
+const darkBadgeURL = computed(() => `https://img.shields.io/npm/v/${name}?style=for-the-badge&logo=npm&label=&color=00D3F3`)
 </script>
 
 <template>
@@ -32,7 +33,11 @@ const badgeURL = computed(() => `https://img.shields.io/npm/v/${name}?style=for-
     </template>
     <template #footer>
       <a :href="npmURL" target="_blank" rel="noopener noreferrer">
-        <img :src="badgeURL" alt="npm">
+        <UColorModeImage
+          :light="lightBadgeURL"
+          :dark="darkBadgeURL"
+          alt="npm"
+        />
       </a>
     </template>
   </UPageCard>
