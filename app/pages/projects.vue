@@ -177,7 +177,6 @@ useSeoMeta({
         name="vue-demarque"
         icon="i-simple-icons:markdown"
         description="Content renderer for Vue"
-        :ui="{ leadingIcon: 'text-default' }"
       />
       <NpmCard
         name="vue-spinach"
@@ -298,7 +297,6 @@ useSeoMeta({
         to="https://github.com/CyanSalt/stylelint-config"
         icon="i-simple-icons:stylelint"
         description="My Stylelint configuration preset"
-        :ui="{ leadingIcon: 'text-default' }"
       />
       <NpmCard
         name="@cyansalt/tsconfig"
@@ -317,7 +315,6 @@ useSeoMeta({
         name="stylelint-plugin-aurora"
         icon="i-simple-icons:stylelint"
         description="Various Stylelint rules in one plugin"
-        :ui="{ leadingIcon: 'text-default' }"
       />
       <NpmCard
         name="stylelint-test-rule-vitest"
