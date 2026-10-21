@@ -4,6 +4,7 @@ import AppHeader from '~/components/AppHeader.vue'
 </script>
 
 <template>
+  <NuxtLoadingIndicator :color="false" class="!bg-primary" />
   <UApp>
     <AppHeader />
     <UMain>
