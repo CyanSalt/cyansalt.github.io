@@ -38,7 +38,7 @@ useHead(() => ({
 
 <template>
   <UContainer v-if="post">
-    <UPage>
+    <UPage :ui="{ center: 'lg:col-span-8 lg:only:col-start-2' }">
       <UPageBody>
         <ContentRenderer :value="post" />
         <UContentSurround :surround="surround" />
