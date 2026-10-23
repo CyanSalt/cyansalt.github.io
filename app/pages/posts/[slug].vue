@@ -48,6 +48,7 @@ useHead(() => ({
   <UContainer v-if="post">
     <UPage :ui="{ center: 'lg:col-span-8 lg:only:col-start-2' }">
       <UPageBody>
+        <UPageHeader :title="post.title" class="border-none mb-0" />
         <ContentRenderer :value="post" />
         <p class="text-dimmed text-sm">
           创作于

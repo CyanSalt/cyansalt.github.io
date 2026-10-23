@@ -1,8 +1,7 @@
 ---
+title: 什么？不同函数的 prototype 竟然会表现不同？
 createdAt: 2022-08-19T11:09:11.000Z
 ---
-
-# 什么？不同函数的 prototype 竟然会表现不同？
 
 之前在 Code Review 的时候发现了这样的代码：
 

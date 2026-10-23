@@ -1,8 +1,7 @@
 ---
+title: JS Why Not 系列
 createdAt: 2020-06-22T08:00:00.000Z
 ---
-
-# JS Why Not 系列
 
 ## 为什么避免使用 ?. 操作符？ {#optional-chaining}
 

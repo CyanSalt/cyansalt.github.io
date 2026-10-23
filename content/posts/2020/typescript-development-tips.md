@@ -1,8 +1,7 @@
 ---
+title: TypeScript 开发技巧
 createdAt: 2020-09-03T08:00:00.000Z
 ---
-
-# TypeScript 开发技巧
 
 ## 写在前面 {#intro}
 
