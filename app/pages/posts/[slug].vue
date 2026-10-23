@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Giscus from '@giscus/vue'
-import { computed, createError, queryCollection, queryCollectionItemSurroundings, useAsyncData, useColorMode, useHead, useRoute } from '#imports'
+import { computed, createError, fromSQLDatetime, queryCollection, queryCollectionItemSurroundings, useAsyncData, useColorMode, useHead, useRoute } from '#imports'
 import darkThemeCSS from '~/assets/giscus-dark.css?raw'
 import lightThemeCSS from '~/assets/giscus-light.css?raw'
 
@@ -15,20 +15,28 @@ const theme = computed(() => {
 
 const route = useRoute()
 
-const { data: post } = await useAsyncData(() => route.path, () => {
+const { data: raw } = await useAsyncData(() => route.path, () => {
   return queryCollection('posts').path(route.path).first()
 })
 
-const { data: surround } = await useAsyncData(() => `surround:${route.path}`, () => {
-  return queryCollectionItemSurroundings('posts', route.path).order('createdAt', 'ASC')
-})
-
-if (!post.value) {
+if (!raw.value) {
   throw createError({
     status: 404,
     statusText: `Page not found: ${route.path}`,
   })
 }
+
+const post = computed(() => {
+  if (!raw.value) return null
+  return {
+    ...raw.value,
+    createdAt: fromSQLDatetime(raw.value.createdAt),
+  }
+})
+
+const { data: surround } = await useAsyncData(() => `surround:${route.path}`, () => {
+  return queryCollectionItemSurroundings('posts', route.path).order('createdAt', 'ASC')
+})
 
 useHead(() => ({
   title: post.value?.title,
@@ -41,6 +49,14 @@ useHead(() => ({
     <UPage :ui="{ center: 'lg:col-span-8 lg:only:col-start-2' }">
       <UPageBody>
         <ContentRenderer :value="post" />
+        <p class="text-dimmed text-sm">
+          创作于
+          <NuxtTime
+            :datetime="post.createdAt"
+            date-style="long"
+            time-style="short"
+          />
+        </p>
         <UContentSurround :surround="surround" />
         <Giscus
           repo="CyanSalt/cyansalt.github.io"

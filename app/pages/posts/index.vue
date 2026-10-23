@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, queryCollection, useAsyncData, useSeoMeta } from '#imports'
+import { computed, fromSQLDatetime, queryCollection, useAsyncData, useSeoMeta } from '#imports'
 
 const title = 'Articles'
 const description = 'My Slop without AI :)'
@@ -25,10 +25,14 @@ function formatYear(date: Date) {
 
 const groups = computed(() => {
   return Array.from(
-    Map.groupBy(posts.value, post => formatYear(new Date(post.createdAt))),
+    Map.groupBy(
+      posts.value.map(post => ({ ...post, createdAt: fromSQLDatetime(post.createdAt) })),
+      post => formatYear(post.createdAt),
+    ),
     ([date, items]) => ({
       date,
-      posts: items.toSorted((a, b) => b.createdAt.localeCompare(a.createdAt)),
+      // @ts-expect-error compare Date
+      posts: items.toSorted((a, b) => b.createdAt - a.createdAt),
     }),
   ).sort((a, b) => b.date.localeCompare(a.date))
 })
