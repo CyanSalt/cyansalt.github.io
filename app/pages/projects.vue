@@ -53,7 +53,7 @@ useSeoMeta({
       >
         <template #leading>
           <img
-            src="https://raw.githubusercontent.com/CyanSalt/commas/master/resources/images/icon.png"
+            src="https://cdn.jsdelivr.net/gh/CyanSalt/commas@master/resources/images/icon.png"
             alt="Commas"
             class="size-16"
           >
@@ -74,7 +74,7 @@ useSeoMeta({
       >
         <template #leading>
           <img
-            src="https://raw.githubusercontent.com/CyanSalt/lyrically/master/resources/images/icon.png"
+            src="https://cdn.jsdelivr.net/gh/CyanSalt/lyrically@master/resources/images/icon.png"
             alt="Lyrically"
             class="size-16"
           >
@@ -95,7 +95,7 @@ useSeoMeta({
       >
         <template #leading>
           <img
-            src="https://raw.githubusercontent.com/CyanSalt/re-pwsbh/main/resources/images/icon.png"
+            src="https://cdn.jsdelivr.net/gh/CyanSalt/re-pwsbh@master/resources/images/icon.png"
             alt="強風オールバック"
             class="size-16"
           >
@@ -166,8 +166,8 @@ useSeoMeta({
       >
         <template #leading>
           <UColorModeImage
-            light="https://raw.githubusercontent.com/CyanSalt/roughness/main/docs/public/r.svg"
-            dark="https://raw.githubusercontent.com/CyanSalt/roughness/main/docs/public/r-dark.svg"
+            light="https://cdn.jsdelivr.net/gh/CyanSalt/roughness@master/docs/public/r.svg"
+            dark="https://cdn.jsdelivr.net/gh/CyanSalt/roughness@master/docs/public/r-dark.svg"
             alt="roughness"
             class="size-5"
           />
@@ -184,7 +184,7 @@ useSeoMeta({
       >
         <template #leading>
           <img
-            src="https://raw.githubusercontent.com/CyanSalt/vue-spinach/main/docs/spinach.svg"
+            src="https://cdn.jsdelivr.net/gh/CyanSalt/vue-spinach@master/docs/spinach.svg"
             alt="vue-spinach"
             class="size-5"
           >
@@ -383,7 +383,7 @@ useSeoMeta({
       >
         <template #leading>
           <img
-            src="https://raw.githubusercontent.com/CyanSalt/git9/main/docs/icon.svg"
+            src="https://cdn.jsdelivr.net/gh/CyanSalt/git9@master/docs/icon.svg"
             alt="git9"
             class="size-5"
           >
