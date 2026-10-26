@@ -81,7 +81,7 @@ createdAt: 2022-08-17T03:09:31.000Z
 
 ![image](https://user-images.githubusercontent.com/5101076/185025995-2f3af7f1-86ec-4588-a9bd-d89c9bbe16a8.png)
 
-小明：我X？为啥？？没天理了？！！
+小明：我 X？为啥？？没天理了？！！
 
 ---
 

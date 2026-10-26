@@ -279,4 +279,4 @@ async function printValue() {
 
 在这个问题上，最明显的表现是 Promise#finally（ES2019）。当某些浏览器没有被 browserslist 覆盖到时，使用 .finally 就会报错。
 
-尽管目前在肉眼可见的未来内，Promise 对象不会有新的原型方法了，我们只需要对 .finally做特殊处理就可以；但是未来的事情，谁又能说清呢？:)
+尽管目前在肉眼可见的未来内，Promise 对象不会有新的原型方法了，我们只需要对 .finally 做特殊处理就可以；但是未来的事情，谁又能说清呢？:)
