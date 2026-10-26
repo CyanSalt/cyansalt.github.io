@@ -13,6 +13,12 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
   compatibilityDate: '2026-06-30',
+  icon: {
+    provider: 'none',
+    clientBundle: {
+      scan: true,
+    },
+  },
   imports: {
     autoImport: false,
   },
