@@ -15,3 +15,8 @@
 .shiki .diff.remove {
   background-color: color-mix(in oklab, var(--ui-error) 10%, transparent);
 }
+
+[data-content-id] mark {
+  color: inherit;
+  background-color: color-mix(in oklab, var(--ui-warning) 50%, transparent);
+}

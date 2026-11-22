@@ -167,7 +167,7 @@ BPG 使用了基于 HEVC 帧内预测算法的有损压缩，这意味着它的�
 
 ![](https://i.ytimg.com/vi/gJJachY651c/maxresdefault.jpg)
 
-*WebP 的后现代艺术*
+_（WebP 的后现代艺术）_
 
 故事的最后则重新回到我们的卷王 Google 身上。在 VP8 对标 H.264 而国际电信联盟发布了 H.265 之后，Google 推出了 VP9 来对标 H.265；尽管不及预期，但最终促成了 AOMedia（开放标准联盟，由 Google、苹果、微软、Facebook、Mozilla 等创建）的成立。基于 VP10 的 AV1 正是 AOMedia 开发的用以代替 H.265 的最新免版税标准。
 

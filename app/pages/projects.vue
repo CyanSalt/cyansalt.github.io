@@ -110,10 +110,33 @@ useSeoMeta({
     </UPageGrid>
   </UPageSection>
   <UPageSection
+    title="Websites"
+    description="The true essence of the internet is that you can access anything, anytime, anywhere."
+  >
+    <UPageGrid>
+      <UPageCard
+        to="https://github.com/CyanSalt/bugti"
+        target="_blank"
+        icon="i-lucide:bug"
+        title="BUGTI"
+        description="Programmer personality test about the trade-offs behind your coding decisions"
+        spotlight
+      />
+    </UPageGrid>
+  </UPageSection>
+  <UPageSection
     title="Working with AI"
     description="These infrastructure components help you make better use of LLM and Harness."
   >
     <UPageGrid>
+      <UPageCard
+        to="https://github.com/CyanSalt/skills"
+        target="_blank"
+        icon="i-simple-icons:agentskills"
+        title="cyansalt/skills"
+        description="My agent skills"
+        spotlight
+      />
       <UPageCard
         to="https://github.com/CyanSalt/dsh-plugins"
         target="_blank"
