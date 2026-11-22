@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useSeoMeta } from '#imports'
+import AIBadge from '~/components/projects/AIBadge.vue'
 import NpmCard from '~/components/projects/NpmCard.vue'
+import ShieldsBadge from '~/components/projects/ShieldsBadge.vue'
 
 const title = 'My Projects'
 const description = 'None of them were created with AI unless otherwise specified.'
@@ -59,10 +61,10 @@ useSeoMeta({
           >
         </template>
         <template #footer>
-          <img
-            src="https://img.shields.io/github/v/release/CyanSalt/commas?style=for-the-badge&label=&color=00B8DB"
+          <ShieldsBadge
+            pathname="/github/v/release/CyanSalt/commas"
             alt="Version"
-          >
+          />
         </template>
       </UPageCard>
       <UPageCard
@@ -80,10 +82,10 @@ useSeoMeta({
           >
         </template>
         <template #footer>
-          <img
-            src="https://img.shields.io/github/v/release/CyanSalt/lyrically.svg?style=for-the-badge&label=&color=00B8DB"
+          <ShieldsBadge
+            pathname="/github/v/release/CyanSalt/lyrically"
             alt="Version"
-          >
+          />
         </template>
       </UPageCard>
       <UPageCard
@@ -101,10 +103,10 @@ useSeoMeta({
           >
         </template>
         <template #footer>
-          <img
-            src="https://img.shields.io/github/v/release/CyanSalt/re-pwsbh.svg?style=for-the-badge&label=&color=00B8DB"
+          <ShieldsBadge
+            pathname="/github/v/release/CyanSalt/re-pwsbh"
             alt="Version"
-          >
+          />
         </template>
       </UPageCard>
     </UPageGrid>
@@ -123,7 +125,7 @@ useSeoMeta({
         spotlight
       >
         <template #footer>
-          <UIcon name="i-simple-icons:vercel" class="text-[#000000] dark:text-[#ffffff]" />
+          <AIBadge level="auto" />
         </template>
       </UPageCard>
     </UPageGrid>
@@ -140,7 +142,11 @@ useSeoMeta({
         title="cyansalt/skills"
         description="My agent skills"
         spotlight
-      />
+      >
+        <template #footer>
+          <AIBadge level="auto" />
+        </template>
+      </UPageCard>
       <UPageCard
         to="https://github.com/CyanSalt/dsh-plugins"
         target="_blank"
@@ -148,12 +154,20 @@ useSeoMeta({
         title="cyansalt/dsh-plugins"
         description="My DeepSeek Harness (DSH) plugins"
         spotlight
-      />
+      >
+        <template #footer>
+          <AIBadge level="copilot" />
+        </template>
+      </UPageCard>
       <NpmCard
         name="decision-pony"
         icon="i-lucide:chess-knight"
         description="OpenAI Decisions API and TypeSafe API (Jev) polyfill with conversational LLM protocols"
-      />
+      >
+        <template #footer>
+          <AIBadge level="copilot" />
+        </template>
+      </NpmCard>
       <NpmCard
         name="openai-ollama"
         icon="i-simple-icons:ollama"
@@ -366,10 +380,10 @@ useSeoMeta({
         :ui="{ leadingIcon: 'text-[#32F08C]' }"
       >
         <template #footer>
-          <img
-            src="https://img.shields.io/open-vsx/v/cyansalt/vscode-theme-porcelain?style=for-the-badge&label=&color=00B8DB"
+          <ShieldsBadge
+            pathname="/open-vsx/v/cyansalt/vscode-theme-porcelain"
             alt="Version"
-          >
+          />
         </template>
       </UPageCard>
       <UPageCard
