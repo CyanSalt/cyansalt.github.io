@@ -121,7 +121,11 @@ useSeoMeta({
         title="BUGTI"
         description="Programmer personality test about the trade-offs behind your coding decisions"
         spotlight
-      />
+      >
+        <template #footer>
+          <UIcon name="i-simple-icons:vercel" class="text-[#000000] dark:text-[#ffffff]" />
+        </template>
+      </UPageCard>
     </UPageGrid>
   </UPageSection>
   <UPageSection
