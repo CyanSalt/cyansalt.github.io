@@ -86,7 +86,7 @@ Date.prototype.toString() // [!code error]
 呃，为何会这样呢？
 
 我想一些对 JS 非常熟悉的同学可能能给出可能的解释：毕竟 `Date` 是一个非常妖魔的函数——全 JS 只有 `Date` 实例的 `.valueOf()` 返回非本身类型的结果（很久以前我甚至基于此特性写过 [跨环境可用的判断对象是否为 Date 类型方法
-](https://scrapbook-cyansalt.vercel.app/is-date)）。事实如此吗？我们可以随着历史的脚步继续前进。
+](https://github.com/CyanSalt/notebook/issues/5)）。事实如此吗？我们可以随着历史的脚步继续前进。
 
 ## 新的标准 {#new-specs}
 
