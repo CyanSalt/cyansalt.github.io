@@ -16,20 +16,20 @@
   background-color: color-mix(in oklab, var(--ui-error) 10%, transparent);
 }
 
-[data-content-id] mark {
+.prose mark {
   color: inherit;
   background-color: color-mix(in oklab, var(--ui-warning) 50%, transparent);
 }
 
-[data-content-id] figure {
+.prose figure {
   @apply my-5;
 }
 
-[data-content-id] figcaption {
+.prose figcaption {
   @apply mt-2.5 text-center text-dimmed text-sm;
 }
 
-[data-content-id] figure > p,
-[data-content-id] figcaption > p {
+.prose figure > p,
+.prose figcaption > p {
   @apply my-0;
 }

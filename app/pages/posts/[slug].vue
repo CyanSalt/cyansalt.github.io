@@ -49,7 +49,7 @@ useHead(() => ({
     <UPage :ui="{ center: 'lg:col-span-8 lg:only:col-start-2' }">
       <UPageBody>
         <UPageHeader :title="post.title" class="border-none mb-0" />
-        <ContentRenderer :value="post" />
+        <ContentRenderer :value="post" class="prose" />
         <p class="text-dimmed text-sm">
           创作于
           <NuxtTime

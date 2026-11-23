@@ -16,7 +16,7 @@ const value = formatter(data)
 
 在上面的代码里，`Function.prototype` 实际上起到了 noop 的作用。可以打开控制台试一下：
 
-```javascript
+```js
 Function.prototype() // undefined
 Function.prototype(1) // undefined
 Function.prototype(1, 2) // undefined
@@ -29,7 +29,7 @@ Function.prototype(1, 2) // undefined
 
 对于几个基本类型的包装对象，我们可以通过 `.valueOf()` 来获取其原始值。我们可以对 `prototype` 也做类似的操作：
 
-```javascript
+```js
 Number.prototype.valueOf() // 0
 String.prototype.valueOf() // ''
 Boolean.prototype.valueOf() // false
@@ -41,13 +41,13 @@ Boolean.prototype.valueOf() // false
 
 对于非基本类型，情况会不同吗？比如我们熟悉的数组。尽管不能使用 `.valueOf()` 检查了，但对于数组我们还有一个大杀器：
 
-```javascript
+```js
 Array.isArray(Array.prototype) // true
 ```
 
 我们甚至可以把 `Array.prototype` 当成一个数组来使用！
 
-```javascript
+```js
 Array.prototype.length // 0
 Array.prototype.push(42)
 Array.prototype[0] // 42
@@ -61,7 +61,7 @@ Array.prototype.length // 1
 
 如果是其他类似数组的东西呢？
 
-```javascript
+```js
 let foo
 foo = Object.getPrototypeOf((function () { return arguments })()) // Arguments {}
 foo.length // undefined
@@ -71,14 +71,14 @@ foo.length // undefined
 
 现在我们知道，在早期的 JavaScript （ES3 之前）中，实际上只有很少几种内置的非基本类型对象，除了 `Array` 我们还有 `Date`。那么 `Date` 是否也如此呢？
 
-```javascript
+```js
 Date.prototype.valueOf() // [!code error]
 // Uncaught TypeError: this is not a Date object.
 ```
 
 咦？这好像和之前我们的结论不同！再试试：
 
-```javascript
+```js
 Date.prototype.toString() // [!code error]
 // Uncaught TypeError: Method Date.prototype.toString called on incompatible receiver [object Object]
 ```
@@ -92,14 +92,14 @@ Date.prototype.toString() // [!code error]
 
 ES3 引入了一些新的类型，比如 `Error` 和 `RegExp`。我们现在试一下：
 
-```javascript
+```js
 Error.prototype.toString() // 'Error'
 RegExp.prototype.toString() // '/(?:)/'
 ```
 
 看上去是如此合理。而且如果我们使用 `.valueOf()`，它们也不会像 `Date` 一样报错。这样看来确实是 `Date` 是异类吗？不要忘记，`RegExp` 也是可以交互的，我们来试试：
 
-```javascript
+```js
 RegExp.prototype.test('foo') // [!code error]
 // Uncaught TypeError: Method RegExp.prototype.exec called on incompatible receiver [object Object]
 ```
@@ -108,7 +108,7 @@ RegExp.prototype.test('foo') // [!code error]
 
 我们过会儿再看这个问题。再看看 `Error`。尽管 `Error.prototype` 表现得很像是一个 `Error`，但实际上它不一致的更彻底：
 
-```javascript
+```js
 Object.prototype.toString.call(Error.prototype) // '[object Object]'
 ```
 
@@ -116,7 +116,7 @@ Object.prototype.toString.call(Error.prototype) // '[object Object]'
 
 再来看看其他的类型吧，比如更后面的 `Array` 的亲戚 `UInt8Array`：
 
-```javascript
+```js
 Uint8Array.prototype.set([], 0) // [!code error]
 // Uncaught TypeError: this is not a typed array.
 ```
@@ -127,7 +127,7 @@ Uint8Array.prototype.set([], 0) // [!code error]
 
 首先是 `BigInt`。按理说应该和 `Number` 的行为类似，试试看：
 
-```javascript
+```js
 BigInt.prototype.valueOf() // [!code error]
 // Uncaught TypeError: BigInt.prototype.valueOf requires that 'this' be a BigInt
 ```
@@ -136,28 +136,28 @@ BigInt.prototype.valueOf() // [!code error]
 
 再试一个基本类型，`Symbol` 同样是没有包装类型的，那么：
 
-```javascript
+```js
 Symbol.prototype.valueOf() // [!code error]
 // Uncaught TypeError: Symbol.prototype.valueOf requires that 'this' be a Symbol
 ```
 
 果然如此。那么让我们试试非基本类型吧，看看 `Array` 的其他亲戚们。先试试 `Set`：
 
-```javascript
+```js
 Set.prototype.add(1) // [!code error]
 // Uncaught TypeError: Method Set.prototype.add called on incompatible receiver #<Set>
 ```
 
 好嘛，那 `Map` 等等就先不用试了。再试一下 `Promise`：
 
-```javascript
+```js
 Promise.prototype.then(console.log) // [!code error]
 // Uncaught TypeError: Method Promise.prototype.then called on incompatible receiver #<Promise>
 ```
 
 行吧。我们最后再试一个没有暴露构造函数的类型：
 
-```javascript
+```js
 let foo
 foo = Object.getPrototypeOf(function *() {}) // GeneratorFunction {}
 
