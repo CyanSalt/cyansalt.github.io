@@ -27,7 +27,7 @@ useSeoMeta({
         icon="i-simple-icons:github"
         color="neutral"
         size="xl"
-        class="px-6 py-3 text-xl rounded-full shadow-md"
+        class="px-6 py-3 text-xl rounded-full"
       />
     </template>
   </UPageHero>
