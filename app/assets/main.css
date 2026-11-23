@@ -20,3 +20,16 @@
   color: inherit;
   background-color: color-mix(in oklab, var(--ui-warning) 50%, transparent);
 }
+
+[data-content-id] figure {
+  @apply my-5;
+}
+
+[data-content-id] figcaption {
+  @apply mt-2.5 text-center text-dimmed text-sm;
+}
+
+[data-content-id] figure > p,
+[data-content-id] figcaption > p {
+  @apply my-0;
+}

@@ -28,9 +28,17 @@ LLM 的生成过程和人类的思维方式非常接近——混合了并行和�
 
 举个例子，在 LDM （一种扩散模型，例如 Stable Diffusion）诞生之后，一个商业应用场景是使用它来生成花式二维码。LDM 可以轻而易举将二维码隐藏在一幅绘画作品里，但是在这个例子里 LLM 就不见得能够处理得比 LDM 更好。
 
+<figure>
+
 ![ldm](https://ik.imagekit.io/cyansalt/2025/after-using-ai-coding-tools/0001-ldm.png)
 
-_（可以眯上眼睛感受一下）_
+<figcaption>
+
+可以眯上眼睛感受一下
+
+</figcaption>
+
+</figure>
 
 为什么？因为 LDM 的工作原理就是**逐步去噪**，这和我们看到这张图像的方式是一样的——近看起来是风景，忽略大部分细节之后才能发现端倪。
 
@@ -40,9 +48,17 @@ _（可以眯上眼睛感受一下）_
 
 这样的场景对于 LLM 而言大概是“输入法”。现在豆包就在做这个事情。输入法对于 LLM 来说简直太小儿科了，毕竟 LLM 本身就是在“预测下一个词”嘛！如果不考虑时延和成本，在不知道任何用户输入习惯的情况下，我相信 LLM 输入法的准确率可以远胜非 AI 输入法。
 
+<figure>
+
 ![doubao-ime](https://ik.imagekit.io/cyansalt/2025/after-using-ai-coding-tools/0002-doubao-ime.png)
 
-_（来自 https://shurufa.doubao.com/pc）_
+<figcaption>
+
+来自 [豆包输入法](https://shurufa.doubao.com/pc)
+
+</figcaption>
+
+</figure>
 
 对于编码，LLM 可能是不够的。举一个负面的例子，我们在探索 Coding Agent 的过程中遇到过一个困难：**代码检索和召回**。很多主流的 Coding Agent 工具都没有利用 LLM 做代码索引，尽管在很多传统的工具上我们反而会通过这种方式处理项目（比如 ctags）。LLM 代码索引的思路很清晰：
 

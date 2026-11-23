@@ -18,9 +18,12 @@ export default defineAppConfig({
       img: {
         variants: {
           width: {
-            false: 'w-auto max-w-full zoom-50',
+            false: 'mx-auto w-auto max-w-[50%]',
           },
         },
+      },
+      blockquote: {
+        base: 'text-muted',
       },
     },
   },

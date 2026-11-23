@@ -165,9 +165,17 @@ BPG 使用了基于 HEVC 帧内预测算法的有损压缩，这意味着它的�
 
 在无损压缩领域有没有呢？显然也是有的，[FLIF](https://github.com/FLIF-hub/FLIF) 就是其中的典型。FLIF 是 2015 年发布的，并且也是完全开源的。FLIF 采用和 H.264 类似的一种动态学习的压缩算法，在无损压缩方面将压缩性能优化到了新高度。但作为一个纯社区项目，FLIF 在发布后不久就逐渐式微，但其核心思路被 JPEG 的新标准 JPEG XL 继承，并且 JPEG XL 最终也在 2020 年作为免版税标准发布；BPG 和 FLIF 也最终启发了 MPEG，发布了基于 HEVC 的图片格式 HEIF。
 
+<figure>
+
 ![](https://i.ytimg.com/vi/gJJachY651c/maxresdefault.jpg)
 
-_（WebP 的后现代艺术）_
+<figcaption>
+
+WebP 的后现代艺术
+
+</figcaption>
+
+</figure>
 
 故事的最后则重新回到我们的卷王 Google 身上。在 VP8 对标 H.264 而国际电信联盟发布了 H.265 之后，Google 推出了 VP9 来对标 H.265；尽管不及预期，但最终促成了 AOMedia（开放标准联盟，由 Google、苹果、微软、Facebook、Mozilla 等创建）的成立。基于 VP10 的 AV1 正是 AOMedia 开发的用以代替 H.265 的最新免版税标准。
 
