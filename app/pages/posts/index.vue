@@ -2,7 +2,7 @@
 import { computed, fromSQLDatetime, queryCollection, useAsyncData, useSeoMeta } from '#imports'
 
 const title = 'Articles'
-const description = 'My Slop without AI :)'
+const description = 'My slop without AI :)'
 
 useSeoMeta({
   title,
